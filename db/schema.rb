@@ -10,12 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_25_143816) do
+ActiveRecord::Schema.define(version: 2020_12_25_164514) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "add_author_ids", force: :cascade do |t|
+  create_table "add_statuses", force: :cascade do |t|
+    t.string "coments"
+    t.string "status"
+    t.string "integer"
+    t.string "default"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -30,12 +34,13 @@ ActiveRecord::Schema.define(version: 2020_12_25_143816) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string "username"
     t.text "body"
-    t.bigint "post_id", null: false
+    t.integer "status", default: 0
+    t.integer "author_id"
+    t.integer "post_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["post_id"], name: "index_comments_on_post_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -45,7 +50,9 @@ ActiveRecord::Schema.define(version: 2020_12_25_143816) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "author_id"
+    t.integer "comments_count"
+    t.integer "views_count"
   end
 
-  add_foreign_key "comments", "posts"
 end

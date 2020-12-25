@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
@@ -9,7 +11,17 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   # GET /posts/1.json
-  def show; end
+  def show
+    @comment_status = params[:comments_status].to_s.downcase
+
+    @comments = if @comment_status == 'unpublished'
+                  @post.comments.unpublished
+                else
+                  @post.comments.published
+                end
+
+    @post.update_columns(views_count: @post.views_count.to_i.succ)
+  end
 
   # GET /posts/new
   def new

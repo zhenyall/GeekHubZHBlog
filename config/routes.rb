@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  root 'post#index', as: 'home'
   resources :posts do
     resources :comments do
       member do

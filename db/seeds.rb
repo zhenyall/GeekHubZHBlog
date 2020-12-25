@@ -11,7 +11,7 @@
 require 'faker'
 
 authors = 5.times do
-  name = Faker::Name,unique.name.split('')
+  name = Faker::Name, unique.name.split('')
   Author.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,

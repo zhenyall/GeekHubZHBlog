@@ -9,6 +9,9 @@
         <% end %>
       </ul>
     </div>
+
+    <%= f.select :author_id, Author.all.collect {|p| [ p.name, p.id ] } %>
+    <%= f.select :category_id, Category.all.collect {|p| [ p.name, p.id ] } %>
   <% end %>
 
   <div class="field">
@@ -34,4 +37,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

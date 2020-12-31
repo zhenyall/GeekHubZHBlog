@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class CommentsController < ApplicationController
+
+  http_basic_authenticate_with name: "admin", password: "11111111"
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.create(comment_params)

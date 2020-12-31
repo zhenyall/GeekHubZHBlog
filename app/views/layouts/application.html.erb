@@ -21,6 +21,29 @@
       <a class="btn btn-outline-primary" href="#">Sign up</a>
       </nav>
     </header>
+
+    <div class="container main">
+      <div class="row">
+        <div class="col-md-12">
+          <% flash.each do |name, message| %>
+            <div class="alert <%= name %>">
+              <button class="close" data-dismiss="alert"></button>
+              <%= message %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="<%= new_user_session_path %>">Entry</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= new_user_registration_path %>" >Registration</a>
+      </li>
+    </ul>
+
     <%= yield %>
   </body>
 </html>

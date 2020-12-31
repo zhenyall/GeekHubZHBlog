@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  root 'post#index', as: 'home'
+  devise_for :users
+  root 'posts#index', as: 'home'
   resources :posts do
     resources :comments do
       member do

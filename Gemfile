@@ -16,7 +16,10 @@ gem 'rubocop'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
-gem 'devise'
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'carrierwave', '~> 2.0'
+gem "mini_magick"
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

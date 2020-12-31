@@ -15,15 +15,6 @@ ActiveRecord::Schema.define(version: 2020_12_31_131915) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "add_statuses", force: :cascade do |t|
-    t.string "coments"
-    t.string "status"
-    t.string "integer"
-    t.string "default"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "authors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -61,10 +52,11 @@ ActiveRecord::Schema.define(version: 2020_12_31_131915) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true

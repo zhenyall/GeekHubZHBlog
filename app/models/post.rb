@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Post < ApplicationRecord
+  mount_uploader :image, ImageUploader
   belongs_to :author, optional: true
   has_many :comments, dependent: :destroy
 

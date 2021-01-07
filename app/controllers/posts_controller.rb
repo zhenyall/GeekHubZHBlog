@@ -3,26 +3,19 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
 
-  http_basic_authenticate_with name: "admin", password: "111", except: [:index, :show]
+  http_basic_authenticate_with name: "admin", password: "11111111",  except: [:index, :show]
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.paginate(page: params[:page], per_page: 2)
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @comment_status = params[:comments_status].to_s.downcase
-
-    @comments = if @comment_status == 'unpublished'
-                  @post.comments.unpublished
-                else
-                  @post.comments.published
-                end
-
-    @post.update_columns(views_count: @post.views_count.to_i.succ)
+    @comments = @post.comments
+    @comment = @post.comments.build
   end
 
   # GET /posts/new

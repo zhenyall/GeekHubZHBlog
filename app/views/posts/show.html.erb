@@ -23,14 +23,26 @@
   <%= @post.content %>
 </p>
 
+<div>
+  <% @comments.each do |c| %>
+    <div>
+      <blockquote>
+        <p><%= c.body %></p>
+        <small><%= c.created_at.strftime('%d.%m.%y') %></small>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
+
+<%= form_for(@comment) do |f| %>
+  <%= f.text_area :body, rows: 5, placeholder: 'Comment text' %>
+  <div>
+    <%= f.submit 'Post it!', class: 'btn' %>
+  </div>
+<% end %>
+
+
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path  %>
 
-<div class="add_comment">
-  <h3>New Comment</h3>
-  <%= render 'comment_form' %>
-</div>
-<div class="comment_list">
-  <h3>Comments</h3>
-  <%= render 'comment_list' %>
-</div>
+

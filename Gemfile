@@ -16,6 +16,7 @@ gem 'rubocop'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+gem 'devise'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 gem 'carrierwave', '~> 2.0'
@@ -39,3 +40,5 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+gem 'will_paginate', '~> 3.1.0'

@@ -1418,27 +1418,30 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rake (vbundled(13.0.3)) [path][gem]" type="rubylib">
+      <library name="rake (vbundled(13.0.1)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="4" />
         </properties>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/doc" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/exe" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/doc" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/exe" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/.github" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/doc" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/exe" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/doc" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/exe" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/.github" />
         </SOURCES>
         <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/doc" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.3/exe" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/bin" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/doc" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/exe" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/rake-13.0.1/.github" />
         </excluded>
       </library>
     </orderEntry>
@@ -1998,6 +2001,25 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/websocket-extensions-0.1.5/lib" />
         </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="will_paginate (vbundled(3.1.8)) [path][gem]" type="rubylib">
+        <properties>
+          <option name="version" value="4" />
+        </properties>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/will_paginate-3.1.8/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/will_paginate-3.1.8/spec" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/will_paginate-3.1.8/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/will_paginate-3.1.8/spec" />
+        </SOURCES>
+        <excluded>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.7.0/gems/will_paginate-3.1.8/spec" />
+        </excluded>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
